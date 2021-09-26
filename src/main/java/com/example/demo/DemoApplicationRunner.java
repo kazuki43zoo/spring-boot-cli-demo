@@ -37,7 +37,8 @@ public class DemoApplicationRunner implements ApplicationRunner, ExitCodeGenerat
       System.out.println("  2 : Command arguments invalid");
       System.out.println("  3 : Calculation error");
       return;
-    } else if (args.containsOption("v") || args.containsOption("version")) {
+    }
+    if (args.containsOption("v") || args.containsOption("version")) {
       System.out.println();
       System.out.println("Version : " + getClass().getPackage().getImplementationVersion());
       return;
